@@ -20,7 +20,7 @@ using MySql.Data.MySqlClient;
 
 namespace cursovayafirsttry.Vm
 {
-    class VievEnrollelistVM : BaseVm    
+    public class VievEnrollelistVM : BaseVm    
     {
         private Discipline selectedDiscipline;
         private List<Enrolle> enrolleBySelectedDiscipline;

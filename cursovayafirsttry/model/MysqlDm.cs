@@ -41,7 +41,7 @@ namespace cursovayafirsttry.model
         internal void InitConnection(string db)
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.UserID = "root";
+            builder.UserID = "Prepod";
             builder.Password = "1234";
             builder.Database = "kursovaya";
             builder.Server = "localhost";
@@ -98,6 +98,7 @@ namespace cursovayafirsttry.model
         //    string column = "Auto_increment";
         //    return GetTableInfo(table, column);
         //}
+        
         //internal int GetRowsCount(string table)
         //{
         //    string column = "Rows";

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace cursovayafirsttry.Vm
 {
-    internal class BaseVm
+    public class BaseVm: INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 

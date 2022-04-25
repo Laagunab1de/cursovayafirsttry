@@ -14,7 +14,7 @@
         <Menu>
             <MenuItem Header="Справочники">
                 <MenuItem Header="Абитуриенты">
-                    <MenuItem Header="Добавить абитуриента" Command="{Binding CreateEnrollee}"/>
+                    <MenuItem Header="Добавить абитуриента" Command="{Binding EditStandartEnrolle}"/>
                     <MenuItem Header="Список абитуриентов" Command="{Binding ViewEnrollee}"/>
                 </MenuItem>
             </MenuItem>

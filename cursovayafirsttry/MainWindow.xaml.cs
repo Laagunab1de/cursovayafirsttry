@@ -28,7 +28,7 @@ namespace cursovayafirsttry
         public MainWindow()
         {
             InitializeComponent();
-            MySqlDB.GetInstance().Update(new Discipline { ID = 2, Title = "1141"});
+            //MySqlDB.GetInstance().Update(new Discipline { ID = 2, Title = "1141"});
             DataContext = new MainVm();
         }
     }

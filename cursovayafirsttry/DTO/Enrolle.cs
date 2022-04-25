@@ -8,7 +8,7 @@ using cursovayafirsttry.Tools;
 namespace cursovayafirsttry.DTO
 {
 
-    internal class Enrolle 
+    public class Enrolle 
     {
         public int ID { get; set; }
         public string surname { get; set; }      

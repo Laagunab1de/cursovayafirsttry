@@ -21,11 +21,9 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding LastName}"/>
-                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding FirstName}"/>
-                    <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding PatronymicName}"/>
-                    <GridViewColumn Header="Дата рождения" DisplayMemberBinding="{Binding Birthday, StringFormat=dd.MM.yyyy}"/>
-                    <GridViewColumn Header="Средний балл аттестата" DisplayMemberBinding="{Binding Averagescoreofthecertificate}"/>
-                    <GridViewColumn Header="Аттестат" DisplayMemberBinding="{Binding certificate}"/>
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding surname}"/>
+                    <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding patronymic}"/>
+                    <GridViewColumn Header="Аттестат" DisplayMemberBinding="{Binding DisciplineId}"/>
                     <GridViewColumn Header="Льготы" DisplayMemberBinding="{Binding Availabilityofbenefits}"/>
                     <GridViewColumn Header="Общежитие" DisplayMemberBinding="{Binding Needsahostel}"/>
                 </GridView>

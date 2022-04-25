@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cursovayafirsttry.DTO
 {
-    internal class Doc_standart//доки для обычных студентов(не сирот)
+    public class Doc_standart//доки для обычных студентов(не сирот)
     {
         public bool EducationDoc { get; set; } //аттестат
         public bool Photo { get; set; } //фото

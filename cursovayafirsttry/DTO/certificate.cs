@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cursovayafirsttry.DTO
 {
-    internal class certificate
+    public class certificate
     {
         public int Number { get; set; }
         public float GPA { get; set; }

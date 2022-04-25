@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace cursovayafirsttry
 {
-    internal class CurrentPageControl
+    public class CurrentPageControl
     {
         Stack<Page> pages = new Stack<Page>();
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cursovayafirsttry.DTO
 {
-    internal class passort
+    public class passort
     {
         public string surname { get; set; }      
         public string FirstName { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cursovayafirsttry.DTO
 {
-    internal class OtherOrphan//доки для сирот 
+    public class OtherOrphan//доки для сирот 
     {
         public bool ApplicationForAdmission { get; set; }//заявление 
         public bool PassportAndItsCopy { get; set; }//пасспорт 

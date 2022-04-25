@@ -21,7 +21,7 @@ using MySql.Data.MySqlClient;
 
 namespace cursovayafirsttry.Vm
 {
-    class MainVm : BaseVm
+    public class MainVm : BaseVm
     {
         CurrentPageControl currentPageControl;
 
@@ -31,7 +31,8 @@ namespace cursovayafirsttry.Vm
        
         }
 
-
+       
+        public Command EditStandartEnrolle { get; set; }
         public Command ViewEnrollee { get; set; }
         public MainVm()
         {
@@ -39,7 +40,12 @@ namespace cursovayafirsttry.Vm
             currentPageControl.PageChanged += CurrentPageControl_PageChanged;
             ViewEnrollee = new Command(() => {
                 currentPageControl.SetPage(new Enrolleelist(null));
-            });         
+            });
+            EditStandartEnrolle = new Command(() => {
+                currentPageControl.SetPage(new EditStandartEnrolle(null));
+            });
+           
+
         }
 
         private void CurrentPageControl_PageChanged(object sender, EventArgs e)
