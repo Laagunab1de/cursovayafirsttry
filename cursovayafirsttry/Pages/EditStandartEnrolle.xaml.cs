@@ -29,6 +29,8 @@ namespace cursovayafirsttry.Pages
         {           
             InitializeComponent();
             DataContext = vm;
+           
+          
         }
     }
 }

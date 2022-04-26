@@ -5,26 +5,50 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:cursovayafirsttry.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="800" 
       Title="EditStandartEnrolle">
 
+    
     <StackPanel>
-        <ScrollViewer>
+
         <StackPanel DataContext="{Binding EditStandartEnrolle}">
             <Label Content="Фамилия"/>
             <TextBox Text="{Binding surname}"/>
-            <Label Content="Фамилия"/>
-            <TextBox Text="{Binding FirstName}"/>
             <Label Content="Имя"/>
+            <TextBox Text="{Binding FirstName}"/>
+            <Label Content="Отчество"/>
             <TextBox Text="{Binding patronymic}"/>
-            <Label Content="Дисциплина"/>
-            <TextBox Text="{Binding FormOfeducation}"/>
-            </StackPanel>
-        </ScrollViewer>
+            <Label Content="Дата Выдачи"/>
+            <DatePicker SelectedDate="{Binding DateofIssued}"/>
+            <Label Content="Балл аттестата"/>
+            <TextBox Text="{Binding GPA}"/>
+            <Label Content="Оригинал?"/>
+            <TextBox Text="{Binding originality}"/>
+            <Label Content="Фото"/>
+            <TextBox Text="{Binding Photo}"/>
+            <Label Content="Флюрография"/>
+            <TextBox Text="{Binding FlurograohicExam}"/>
+            <Label Content="Копия снилс"/>
+            <TextBox Text="{Binding CopyOfSnils}"/>
+            <Label Content="Полис"/>
+            <TextBox Text="{Binding MedicalPolicy}"/>
+            <Label Content="Серия"/>
+            <TextBox Text="{Binding series}"/>
+            <Label Content="Номер"/>
+            <TextBox Text="{Binding number}"/>
+            <Label Content="Дата Выдачи"/>
+            <DatePicker SelectedDate="{Binding DateofIssued}"/>
+            <Label Content="Кем выдан"/>
+            <TextBox Text="{Binding Issued_by}"/>
+            <Label Content="Место регистрации"/>
+            <TextBox Text="{Binding placeofregistration}"/>
+        </StackPanel>
+     
         <Label Content="Дисциплина"/>
         <ComboBox ItemsSource="{Binding Discipline}"
                   SelectedItem="{Binding EnrolleDiscipline}"
                   DisplayMemberPath="Title"/>
         <Button Content="Сохранить" Command="{Binding SaveEnrolle}"/>
+
     </StackPanel>
 </Page>

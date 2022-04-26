@@ -12,7 +12,6 @@ namespace cursovayafirsttry.DTO
         public bool Photo { get; set; } //фото
         public bool FlurograohicExam { get; set; }//флюшка
         public int CopyOfSnils { get; set; }//снилс
-        public bool VaccinationDoc { get; set; }//книжка с прививками
         public bool MedicalPolicy { get; set; }//полис
         public bool Passport { get; set; }//пасспорт
     }

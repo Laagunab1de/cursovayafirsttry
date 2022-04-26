@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cursovayafirsttry"
         mc:Ignorable="d"
-        Title="КУРСАЧЧЧЧЧ" d:Height="400" d:Width="500" WindowStartupLocation="CenterScreen">
+        Title="КУРСАЧЧЧЧЧ"
+        WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

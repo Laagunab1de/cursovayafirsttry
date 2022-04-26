@@ -8,7 +8,7 @@ namespace cursovayafirsttry.DTO
 {
     public class certificate
     {
-        public int Number { get; set; }
+        public int ID { get; set; }
         public float GPA { get; set; }
         public bool originality { get; set; }
     }

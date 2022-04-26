@@ -71,6 +71,6 @@ namespace cursovayafirsttry.Vm
                 //    model.Update(EditEnrolle);
                 currentPageControl.SetPage(new Enrolleelist(EnrolleDiscipline));
             });
-        }
+        }   
     }
 }
