@@ -107,14 +107,22 @@
     <Compile Include="DTO\passort.cs" />
     <Compile Include="model\MysqlDm.cs" />
     <Compile Include="model\Sql.cs" />
+    <Compile Include="Pages\EditOrphanEnrolle.xaml.cs">
+      <DependentUpon>EditOrphanEnrolle.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EditStandartEnrolle.xaml.cs">
       <DependentUpon>EditStandartEnrolle.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tool\ColumnAttribute.cs" />
     <Compile Include="Tool\TableAttribute.cs" />
     <Compile Include="Vm\BaseVm.cs" />
+    <Compile Include="Vm\EditOrphanEnrolleVM.cs" />
     <Compile Include="Vm\EditStandartEnrolleVm.cs" />
     <Compile Include="Vm\VievEntolleelistVM.cs" />
+    <Page Include="Pages\EditOrphanEnrolle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EditStandartEnrolle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

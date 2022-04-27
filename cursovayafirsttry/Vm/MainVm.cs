@@ -31,7 +31,7 @@ namespace cursovayafirsttry.Vm
        
         }
 
-       
+        public Command EditOrphanEnrolle { get; set; }
         public Command EditStandartEnrolle { get; set; }
         public Command ViewEnrollee { get; set; }
         public MainVm()
@@ -44,7 +44,9 @@ namespace cursovayafirsttry.Vm
             EditStandartEnrolle = new Command(() => {
                 currentPageControl.SetPage(new EditStandartEnrolle(null));
             });
-           
+            EditOrphanEnrolle = new Command(() => {
+                currentPageControl.SetPage(new EditOrphanEnrolle(null));
+            });
 
         }
 
