@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using cursovayafirsttry.DTO;
 using cursovayafirsttry.Vm;
 using cursovayafirsttry.Pages;
+using cursovayafirsttry.model;
 using MySql.Data.MySqlClient;
 
 
@@ -23,7 +24,7 @@ namespace cursovayafirsttry.Vm
 {
     public class MainVm : BaseVm
     {
-        CurrentPageControl currentPageControl;
+        public CurrentPageControl currentPageControl;
 
         public Page CurrentPage
         {
@@ -31,6 +32,8 @@ namespace cursovayafirsttry.Vm
        
         }
 
+        public Command ViewDiscipline { get; set; }
+        public Command AddDiscipline { get; set; }
         public Command EditOrphanEnrolle { get; set; }
         public Command EditStandartEnrolle { get; set; }
         public Command ViewEnrollee { get; set; }
@@ -42,10 +45,16 @@ namespace cursovayafirsttry.Vm
                 currentPageControl.SetPage(new Enrolleelist(null));
             });
             EditStandartEnrolle = new Command(() => {
-                currentPageControl.SetPage(new EditStandartEnrolle(null));
+                currentPageControl.SetPage(new EditStandartEnrolle(new EditStandartEnrolleVM(currentPageControl)));
             });
             EditOrphanEnrolle = new Command(() => {
-                currentPageControl.SetPage(new EditOrphanEnrolle(null));
+                currentPageControl.SetPage(new EditOrphanEnrolle(new EditOrphanEnrolleVM(currentPageControl)));
+            });
+            AddDiscipline = new Command(() => {
+                currentPageControl.SetPage(new EditDiscipline(null));
+            });
+            ViewDiscipline = new Command(() => {
+                currentPageControl.SetPage(new ViewDiscipline());
             });
 
         }

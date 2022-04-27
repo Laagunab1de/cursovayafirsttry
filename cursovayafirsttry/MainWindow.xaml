@@ -19,6 +19,10 @@
                     <MenuItem Header="Список абитуриентов" Command="{Binding ViewEnrollee}"/>
                     <MenuItem Header="Добавить абитуриента(сирота)" Command="{Binding EditOrphanEnrolle}"/>
                 </MenuItem>
+                <MenuItem Header="Дисциплины">
+                    <MenuItem Header="Добавить Дисциплину" Command="{Binding AddDiscipline}"/>
+                    <MenuItem Header="Список абитуриентов" Command="{Binding ViewDiscipline}"/>
+                </MenuItem>
             </MenuItem>
         </Menu>
         <Frame Content="{Binding CurrentPage}" Grid.Row="1" NavigationUIVisibility="Hidden"/>
