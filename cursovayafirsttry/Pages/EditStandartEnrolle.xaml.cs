@@ -25,7 +25,7 @@ namespace cursovayafirsttry.Pages
     /// </summary>
     public partial class EditStandartEnrolle : Page
     {
-        public EditStandartEnrolle(EditEnrolleVM vm)
+        public EditStandartEnrolle(EditStandartEnrolleVM vm)
         {           
             InitializeComponent();
             DataContext = vm;

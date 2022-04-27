@@ -20,7 +20,7 @@ using MySql.Data.MySqlClient;
 
 namespace cursovayafirsttry.Vm
 {
-    public class EditEnrolleVM : BaseVm
+    public class EditStandartEnrolleVM : BaseVm
     {
         public Enrolle EditEnrolle { get; }
         public Command SaveEnrolle { get; set; }
@@ -39,14 +39,14 @@ namespace cursovayafirsttry.Vm
         private CurrentPageControl currentPageControl;
         private Discipline enrolleDiscipline;
 
-        public EditEnrolleVM(CurrentPageControl currentPageControl)
+        public EditStandartEnrolleVM(CurrentPageControl currentPageControl)
         {
             this.currentPageControl = currentPageControl;
             EditEnrolle = new Enrolle();
             Init();
         }
 
-        public EditEnrolleVM(Enrolle editEnrolle, CurrentPageControl currentPageControl)
+        public EditStandartEnrolleVM(Enrolle editEnrolle, CurrentPageControl currentPageControl)
         {
             EditEnrolle = editEnrolle;
             this.currentPageControl = currentPageControl;
@@ -57,12 +57,7 @@ namespace cursovayafirsttry.Vm
         private void Init()
         {
             Disciplines = SqlModel.GetInstance().SelectDisciplinesRange(0, 100);
-            SaveEnrolle = new Command(() => {
-                if (EnrolleDiscipline == null)
-                {
-                    System.Windows.MessageBox.Show("Нужно выбрать группу для продолжения");
-                    return;
-                }
+            SaveEnrolle = new Command(() => {               
                 EditEnrolle.DisciplineId = EnrolleDiscipline.ID;
                 var model = SqlModel.GetInstance();
                 //if (EditEnrolle.ID == 0)
