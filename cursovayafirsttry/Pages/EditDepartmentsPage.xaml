@@ -1,4 +1,4 @@
-﻿<Page x:Class="cursovayafirsttry.Pages.EditDiscipline"
+﻿<Page x:Class="cursovayafirsttry.Pages.EditDepartmentsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,13 +6,11 @@
       xmlns:local="clr-namespace:cursovayafirsttry.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="AddDiscipline">
+      Title="EditDepartmentsPage">
 
     <StackPanel>
         <Label Content="Название"/>
         <TextBox Text="{Binding EditDiscipline.Title}"/>
-        <Label Content="Число мест"/>
-        <TextBox Text="{Binding EditDiscipline.NuberOfPlaces}"/>
         <Button Content="Сохранить" Command="{Binding SaveDiscipline}" />
     </StackPanel>
 </Page>

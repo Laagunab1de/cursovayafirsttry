@@ -47,7 +47,7 @@
                 <TextBox Text="{Binding placeofregistration}" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
             </StackPanel>
 
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Vertical" DataContext="{Binding EditStandartEnrolle}" Width="264" Height="250">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Orientation="Vertical" DataContext="{Binding EditStandartEnrolle}" Width="264" Height="432">
                 <Label Content="Фамилия" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
                 <TextBox Text="{Binding surname}" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
                 <Label Content="Имя" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
@@ -56,6 +56,8 @@
                 <TextBox Text="{Binding patronymic}" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
                 <Label Content="Дата рождения" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
                 <DatePicker SelectedDate="{Binding Birthday}" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
+                <Label Content="Дата подачи заявления" MaxWidth="250" MinWidth="150"/>
+                <DatePicker SelectedDate="{Binding DateOfAdmission}" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
             </StackPanel>
 
             <StackPanel Orientation="Vertical" DataContext="{Binding EditStandartEnrolle}" Grid.Column="2" HorizontalAlignment="Left" Margin="66,0,0,0" Width="150" >
@@ -71,7 +73,7 @@
                 <TextBox Text="{Binding placeofregistration}" MaxWidth="250" MinWidth="150" HorizontalAlignment="Left"/>
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" DataContext="{Binding EditStandartEnrolle}" HorizontalAlignment="Left"  Width="144" Margin="3,183,0,234" >
+            <StackPanel Orientation="Vertical" DataContext="{Binding EditStandartEnrolle}" HorizontalAlignment="Left"  Width="144" Margin="0,236,0,181" >
                 <Label Content="Дисциплина"/>
                 <ComboBox ItemsSource="{Binding Discipline}"
                   SelectedItem="{Binding EnrolleDiscipline}"

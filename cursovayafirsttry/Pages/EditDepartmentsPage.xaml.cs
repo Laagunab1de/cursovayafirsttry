@@ -14,16 +14,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using cursovayafirsttry.DTO;
 using cursovayafirsttry.Vm;
-using cursovayafirsttry;
+using cursovayafirsttry.Pages;
+using cursovayafirsttry.model;
+using MySql.Data.MySqlClient;
 
-namespace cursovayafirsttry.DTO
+namespace cursovayafirsttry.Pages
 {
-    public partial class Discipline
+    /// <summary>
+    /// Interaction logic for EditDepartmentsPage.xaml
+    /// </summary>
+    public partial class EditDepartmentsPage : Page
     {
-        public int ID { get; set; }
-
-        public string Title { get; set; } = "";
-        
-        public int NuberOfPlaces { get; set; }
-    } 
+        public EditDepartmentsPage(EditDepartmentsVM vm)
+        {
+            InitializeComponent();
+            DataContext = vm;
+        }
+    }
 }

@@ -100,6 +100,7 @@
     </ApplicationDefinition>
     <Compile Include="DTO\Base.cs" />
     <Compile Include="DTO\certificate.cs" />
+    <Compile Include="DTO\Departments.cs" />
     <Compile Include="DTO\Discipline.cs" />
     <Compile Include="DTO\Doc_standart.cs" />
     <Compile Include="DTO\Enrolle.cs" />
@@ -107,6 +108,9 @@
     <Compile Include="DTO\passort.cs" />
     <Compile Include="model\MysqlDm.cs" />
     <Compile Include="model\Sql.cs" />
+    <Compile Include="Pages\EditDepartmentsPage.xaml.cs">
+      <DependentUpon>EditDepartmentsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EditDiscipline.xaml.cs">
       <DependentUpon>EditDiscipline.xaml</DependentUpon>
     </Compile>
@@ -116,17 +120,26 @@
     <Compile Include="Pages\EditStandartEnrolle.xaml.cs">
       <DependentUpon>EditStandartEnrolle.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ViewDepartmentsPage.xaml.cs">
+      <DependentUpon>ViewDepartmentsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ViewDiscipline.xaml.cs">
       <DependentUpon>ViewDiscipline.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tool\ColumnAttribute.cs" />
     <Compile Include="Tool\TableAttribute.cs" />
+    <Compile Include="Vm\EditDepartmentsVM.cs" />
     <Compile Include="Vm\EditDisciplineVM.cs" />
     <Compile Include="Vm\BaseVm.cs" />
     <Compile Include="Vm\EditOrphanEnrolleVM.cs" />
     <Compile Include="Vm\EditStandartEnrolleVm.cs" />
     <Compile Include="Vm\VievEntolleelistVM.cs" />
+    <Compile Include="Vm\ViewDepartmentsVM.cs" />
     <Compile Include="Vm\ViewDisciplineVM.cs" />
+    <Page Include="Pages\EditDepartmentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EditDiscipline.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -161,6 +174,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\ViewDepartmentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\ViewDiscipline.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

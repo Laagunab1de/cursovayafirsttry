@@ -23,6 +23,10 @@
                     <MenuItem Header="Добавить Дисциплину" Command="{Binding AddDiscipline}"/>
                     <MenuItem Header="Список абитуриентов" Command="{Binding ViewDiscipline}"/>
                 </MenuItem>
+                <MenuItem Header="Отделения">
+                    <MenuItem Header="Добавить Отделение" Command="{Binding AddDepartment}"/>
+                    <MenuItem Header="Список Отделений" Command="{Binding ViewDepartment}"/>
+                </MenuItem>
             </MenuItem>
         </Menu>
         <Frame Content="{Binding CurrentPage}" Grid.Row="1" NavigationUIVisibility="Hidden"/>

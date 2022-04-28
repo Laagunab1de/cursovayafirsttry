@@ -16,14 +16,17 @@ using cursovayafirsttry.DTO;
 using cursovayafirsttry.Vm;
 using cursovayafirsttry;
 
-namespace cursovayafirsttry.DTO
+namespace cursovayafirsttry.Pages
 {
-    public partial class Discipline
+    /// <summary>
+    /// Interaction logic for ViewDepartmentsPage.xaml
+    /// </summary>
+    public partial class ViewDepartmentsPage : Page
     {
-        public int ID { get; set; }
-
-        public string Title { get; set; } = "";
-        
-        public int NuberOfPlaces { get; set; }
-    } 
+        public ViewDepartmentsPage(ViewDepartmentsVM vm)
+        {
+            InitializeComponent();
+            DataContext = vm;
+        }
+    }
 }

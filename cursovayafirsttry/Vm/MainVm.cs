@@ -32,6 +32,8 @@ namespace cursovayafirsttry.Vm
        
         }
 
+        public Command ViewDepartment { get; set; }
+        public Command AddDepartment { get; set; }
         public Command ViewDiscipline { get; set; }
         public Command AddDiscipline { get; set; }
         public Command EditOrphanEnrolle { get; set; }
@@ -55,6 +57,13 @@ namespace cursovayafirsttry.Vm
             });
             ViewDiscipline = new Command(() => {
                 currentPageControl.SetPage(new ViewDiscipline());
+            });
+            ViewDepartment = new Command(() =>
+            {
+                currentPageControl.SetPage(new ViewDepartmentsPage(null)); 
+            });
+            AddDepartment = new Command(() => {
+                currentPageControl.SetPage(new EditDepartmentsPage(null));
             });
 
         }

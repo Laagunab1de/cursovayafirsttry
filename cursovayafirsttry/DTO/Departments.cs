@@ -14,16 +14,15 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using cursovayafirsttry.DTO;
 using cursovayafirsttry.Vm;
-using cursovayafirsttry;
+using cursovayafirsttry.Pages;
+using cursovayafirsttry.model;
+using MySql.Data.MySqlClient;
 
 namespace cursovayafirsttry.DTO
 {
-    public partial class Discipline
+    public class Departments
     {
         public int ID { get; set; }
-
-        public string Title { get; set; } = "";
-        
-        public int NuberOfPlaces { get; set; }
-    } 
+        public string Title { get; set; }
+    }
 }
