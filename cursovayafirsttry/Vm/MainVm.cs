@@ -32,6 +32,7 @@ namespace cursovayafirsttry.Vm
        
         }
 
+        public Command ConnectToBDCom { get; set; }
         public Command ViewDepartment { get; set; }
         public Command AddDepartment { get; set; }
         public Command ViewDiscipline { get; set; }
@@ -65,7 +66,9 @@ namespace cursovayafirsttry.Vm
             AddDepartment = new Command(() => {
                 currentPageControl.SetPage(new EditDepartmentsPage(null));
             });
-
+            ConnectToBDCom = new Command(() => {
+                currentPageControl.SetPage(new ConnectToBD());
+            });
         }
 
         private void CurrentPageControl_PageChanged(object sender, EventArgs e)

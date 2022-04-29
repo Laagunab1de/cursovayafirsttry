@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:cursovayafirsttry"
         mc:Ignorable="d"
         Title="КУРСАЧЧЧЧЧ"
-        WindowState="Maximized">
+        WindowState="Maximized" Height="600" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -28,6 +28,9 @@
                     <MenuItem Header="Список Отделений" Command="{Binding ViewDepartment}"/>
                 </MenuItem>
             </MenuItem>
+            <Button Height="22" Width="24" HorizontalAlignment="Left" Command="{Binding ConnectToBDCom}">
+                <Image Height="20" Source="/pngSettings.png" Stretch="Fill" Width="20"/>
+            </Button>
         </Menu>
         <Frame Content="{Binding CurrentPage}" Grid.Row="1" NavigationUIVisibility="Hidden"/>
     </Grid>

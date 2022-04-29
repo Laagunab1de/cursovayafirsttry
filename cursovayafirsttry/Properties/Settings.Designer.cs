@@ -26,5 +26,64 @@ namespace cursovayafirsttry.Properties
                 return defaultInstance;
             }
         }
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("student")]
+        public string user
+        {
+            get
+            {
+                return ((string)(this["user"]));
+            }
+            set
+            {
+                this["user"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("student")]
+        public string pass
+        {
+            get
+            {
+                return ((string)(this["pass"]));
+            }
+            set
+            {
+                this["pass"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.12")]
+        public string server
+        {
+            get
+            {
+                return ((string)(this["server"]));
+            }
+            set
+            {
+                this["server"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1125_students")]
+        public string db
+        {
+            get
+            {
+                return ((string)(this["db"]));
+            }
+            set
+            {
+                this["db"] = value;
+            }
+        }
     }
 }

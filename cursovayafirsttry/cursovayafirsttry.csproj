@@ -106,8 +106,11 @@
     <Compile Include="DTO\Enrolle.cs" />
     <Compile Include="DTO\OtherOrphan.cs" />
     <Compile Include="DTO\passort.cs" />
-    <Compile Include="model\MysqlDm.cs" />
+    <Compile Include="model\MySqlDB.cs" />
     <Compile Include="model\Sql.cs" />
+    <Compile Include="Pages\ConnectToBD.xaml.cs">
+      <DependentUpon>ConnectToBD.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\EditDepartmentsPage.xaml.cs">
       <DependentUpon>EditDepartmentsPage.xaml</DependentUpon>
     </Compile>
@@ -128,6 +131,7 @@
     </Compile>
     <Compile Include="Tool\ColumnAttribute.cs" />
     <Compile Include="Tool\TableAttribute.cs" />
+    <Compile Include="Vm\ConnectToBDVM.cs" />
     <Compile Include="Vm\EditDepartmentsVM.cs" />
     <Compile Include="Vm\EditDisciplineVM.cs" />
     <Compile Include="Vm\BaseVm.cs" />
@@ -136,6 +140,10 @@
     <Compile Include="Vm\VievEntolleelistVM.cs" />
     <Compile Include="Vm\ViewDepartmentsVM.cs" />
     <Compile Include="Vm\ViewDisciplineVM.cs" />
+    <Page Include="Pages\ConnectToBD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EditDepartmentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -210,6 +218,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="pngSettings.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

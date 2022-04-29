@@ -34,50 +34,50 @@ namespace cursovayafirsttry.model
 
         internal void InitConnection()
         {
-               //InitConnection(Properties.Settings.Default.server, Properties.Settings.Default.user,
-               //Properties.Settings.Default.db, Properties.Settings.Default.pass);
+               InitConnection(Properties.Settings.Default.server, Properties.Settings.Default.user,
+               Properties.Settings.Default.db, Properties.Settings.Default.pass);
         }
 
-        internal void InitConnection(string db)
+        internal void InitConnection(string server, string user, string db, string password)
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.UserID = "Prepod";
-            builder.Password = "1234";
-            builder.Database = "kursovaya";
-            builder.Server = "localhost";
+            builder.UserID = user;
+            builder.Password = password;
+            builder.Database = db;
+            builder.Server = server;
             builder.CharacterSet = "utf8";
             builder.ConnectionTimeout = 5;
 
             sqlConnection = new MySqlConnection(builder.GetConnectionString(true));
         }
 
-        //internal bool OpenConnection()
-        //{
-        //    try
-        //    {
-        //        if (sqlConnection == null)
-        //            InitConnection();
-        //        sqlConnection.Open();
-        //        return true;
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        System.Windows.MessageBox.Show(e.Message);
-        //    }
-        //    return false;
-        //}
+        internal bool OpenConnection()
+        {
+            try
+            {
+                if (sqlConnection == null)
+                    InitConnection();
+                sqlConnection.Open();
+                return true;
+            }
+            catch (Exception e)
+            {
+                System.Windows.MessageBox.Show(e.Message);
+            }
+            return false;
+        }
 
-        //internal void CloseConnection()
-        //{
-        //    try 
-        //    {
-        //        sqlConnection.Close(); // закрытие соединения
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        Console.WriteLine(e.Message);
-        //    }
-        //}
+        internal void CloseConnection()
+        {
+            try
+            {
+                sqlConnection.Close(); // закрытие соединения
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
 
         //internal void ExecuteNonQuery(string query, MySqlParameter[] parameters = null)
         //{
@@ -98,7 +98,7 @@ namespace cursovayafirsttry.model
         //    string column = "Auto_increment";
         //    return GetTableInfo(table, column);
         //}
-        
+
         //internal int GetRowsCount(string table)
         //{
         //    string column = "Rows";
