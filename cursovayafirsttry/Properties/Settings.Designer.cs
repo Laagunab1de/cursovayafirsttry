@@ -28,7 +28,7 @@ namespace cursovayafirsttry.Properties
         }
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("student")]
+        [global::System.Configuration.DefaultSettingValueAttribute("root")]
         public string user
         {
             get
@@ -43,7 +43,7 @@ namespace cursovayafirsttry.Properties
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("student")]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string pass
         {
             get
@@ -58,7 +58,7 @@ namespace cursovayafirsttry.Properties
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.1.12")]
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
         public string server
         {
             get
@@ -73,16 +73,16 @@ namespace cursovayafirsttry.Properties
 
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1125_students")]
-        public string db
+        [global::System.Configuration.DefaultSettingValueAttribute("enrollebd")]
+        public string BD
         {
             get
             {
-                return ((string)(this["db"]));
+                return ((string)(this["BD"]));
             }
             set
             {
-                this["db"] = value;
+                this["BD"] = value;
             }
         }
     }

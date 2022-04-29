@@ -37,22 +37,22 @@ namespace cursovayafirsttry.Vm
 
             Server = Properties.Settings.Default.server;
             User = Properties.Settings.Default.user;
-            BD = Properties.Settings.Default.db;
+            BD = Properties.Settings.Default.BD;
             passwordBox.Password = Properties.Settings.Default.pass;
 
             TestConnectionToBD = new Command(() => {
-                var db = MySqlDB.GetDB();
-                db.InitConnection(Server, User, BD, passwordBox.Password);
-                if (db.OpenConnection())
+                var BD = MySqlDB.GetDB();
+                BD.InitConnection(Server, User, this.BD, passwordBox.Password);
+                if (BD.OpenConnection())
                 {
-                    db.CloseConnection();
+                    BD.CloseConnection();
                     System.Windows.MessageBox.Show("Соединение успешно!");
                 }
             });
 
             SaveConnect = new Command(() => {
                 Properties.Settings.Default.user = User;
-                Properties.Settings.Default.db = BD;
+                Properties.Settings.Default.BD = BD;
                 Properties.Settings.Default.pass = passwordBox.Password;
                 Properties.Settings.Default.server = Server;
                 Properties.Settings.Default.Save();

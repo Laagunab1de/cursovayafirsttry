@@ -35,15 +35,15 @@ namespace cursovayafirsttry.model
         internal void InitConnection()
         {
                InitConnection(Properties.Settings.Default.server, Properties.Settings.Default.user,
-               Properties.Settings.Default.db, Properties.Settings.Default.pass);
+               Properties.Settings.Default.BD, Properties.Settings.Default.pass);
         }
 
-        internal void InitConnection(string server, string user, string db, string password)
+        internal void InitConnection(string server, string user, string BD, string password)
         {
             MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
             builder.UserID = user;
             builder.Password = password;
-            builder.Database = db;
+            builder.Database = BD;
             builder.Server = server;
             builder.CharacterSet = "utf8";
             builder.ConnectionTimeout = 5;
